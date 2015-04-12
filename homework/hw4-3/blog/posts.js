@@ -43,7 +43,7 @@ function PostsDAO(db) {
     this.getPosts = function(num, callback) {
         "use strict";
 
-        // was created inexe {date: -1}
+        // was created index {date: -1}
         posts.find().sort('date', -1).limit(num).toArray(function(err, items) {
             "use strict";
 
@@ -58,7 +58,7 @@ function PostsDAO(db) {
     this.getPostsByTag = function(tag, num, callback) {
         "use strict";
 
-        // was created inexe {tags: 1}
+        // was created index {tags: 1}
         posts.find({ tags : tag }).sort('date', -1).limit(num).toArray(function(err, items) {
             "use strict";
 
@@ -73,7 +73,7 @@ function PostsDAO(db) {
     this.getPostByPermalink = function(permalink, callback) {
         "use strict";
 
-        // was created inexe {permalink: 1}
+        // was created index {permalink: 1}
         posts.findOne({'permalink': permalink}, function(err, post) {
             "use strict";
 
