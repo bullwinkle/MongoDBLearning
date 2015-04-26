@@ -1,3 +1,8 @@
+### TODO
+	- make configurable
+	- ability for taking existing replset, if exists
+###
+
 MongoDB = require('mongodb')
 MongoClient = MongoDB.MongoClient
 Server = MongoDB.Server
