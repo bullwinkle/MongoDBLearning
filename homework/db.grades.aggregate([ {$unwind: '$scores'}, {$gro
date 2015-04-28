@@ -1,0 +1,2 @@
+ db.grades.aggregate([ {$unwind: '$scores'}, {$group: {  }} ])
+

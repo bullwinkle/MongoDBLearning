@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://github.com/fnando/browser -->
+<html lang="en" class=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    
+    
+    <title>fnando/browser · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site"><meta content="summary" name="twitter:card"><meta content="fnando/browser" name="twitter:title"><meta content="Do some browser detection with Ruby. Includes ActionController integration." name="twitter:description"><meta content="https://avatars1.githubusercontent.com/u/3009?v=3&amp;s=400" name="twitter:image:src">
+      <meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="https://avatars1.githubusercontent.com/u/3009?v=3&amp;s=400" property="og:image"><meta content="fnando/browser" property="og:title"><meta content="https://github.com/fnando/browser" property="og:url"><meta content="Do some browser detection with Ruby. Includes ActionController integration." property="og:description">
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient="">
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host"><meta content="collector-cdn.github.com" name="octolytics-script-host"><meta content="github" name="octolytics-app-id"><meta content="4F86D3EA:5677:1E59000:55378B8B" name="octolytics-dimension-request_id">
+    
+    <meta content="Rails, view, files#disambiguate" name="analytics-event">
+    <meta class="js-ga-set" name="dimension1" content="Logged Out">
+    <meta class="js-ga-set" name="dimension2" content="Header v3">
+    <meta name="is-dotcom" content="true">
+    <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="rzdmGIqsoerQe8rM4ronkFmpiPDASimBsr/WVUOhHoXKjLVflqCgcOFTyPNb/S1kug62o7PO0aR4BzGZrnU7Tw==" name="csrf-token">
+
+    <link href="https://assets-cdn.github.com/assets/github-b8bf94f7202a5c0cb964b62868d4b394c697b20c13063301162207f7db1e16c3.css" media="all" rel="stylesheet">
+    <link href="https://assets-cdn.github.com/assets/github2-4dcecdbd59af4cd1dd8cf24ccaf35b686d848468ddcd7d52a8bf57c21ac4e5fb.css" media="all" rel="stylesheet">
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="6fed8eab9ab46302e651d81b775bdedc">
+
+      
+  <meta name="description" content="Do some browser detection with Ruby. Includes ActionController integration.">
+  <meta name="go-import" content="github.com/fnando/browser git https://github.com/fnando/browser.git">
+
+  <meta content="3009" name="octolytics-dimension-user_id"><meta content="fnando" name="octolytics-dimension-user_login"><meta content="779276" name="octolytics-dimension-repository_id"><meta content="fnando/browser" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="779276" name="octolytics-dimension-repository_network_root_id"><meta content="fnando/browser" name="octolytics-dimension-repository_network_root_nwo">
+  <link href="https://github.com/fnando/browser/commits/master.atom" rel="alternate" title="Recent Commits to browser:master" type="application/atom+xml">
+
+  <script type="text/javascript" async="" src="./fnando_browser · GitHub_files/api.js"></script></head>
+
+
+  <body class="logged_out  env-production macintosh vis-public">
+    <a href="https://github.com/fnando/browser#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+
+
+        
+        <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="btn btn-primary" href="https://github.com/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="btn" href="https://github.com/login?return_to=%2Ffnando%2Fbrowser" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <form accept-charset="UTF-8" action="https://github.com/fnando/browser/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/fnando/browser/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+  <input type="text" class="js-site-search-field is-clearable" data-hotkey="s" name="q" placeholder="Search" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off">
+  <div class="scope-badge">This repository</div>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://github.com/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://github.com/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://github.com/blog" data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope="" itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="https://github.com/login?return_to=%2Ffnando%2Fbrowser" class="btn btn-sm btn-with-count tooltipped tooltipped-n" aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <span class="octicon octicon-eye"></span>
+    Watch
+  </a>
+  <a class="social-count" href="https://github.com/fnando/browser/watchers">
+    31
+  </a>
+
+  </li>
+
+  <li>
+      <a href="https://github.com/login?return_to=%2Ffnando%2Fbrowser" class="btn btn-sm btn-with-count tooltipped tooltipped-n" aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="https://github.com/fnando/browser/stargazers">
+      813
+    </a>
+
+  </li>
+
+    <li>
+      <a href="https://github.com/login?return_to=%2Ffnando%2Fbrowser" class="btn btn-sm btn-with-count tooltipped tooltipped-n" aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+      <a href="https://github.com/fnando/browser/network" class="social-count">
+        157
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="https://github.com/fnando" class="url fn" itemprop="url" rel="author"><span itemprop="title">fnando</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="./fnando_browser · GitHub_files/fnando_browser · GitHub.html" class="js-current-repository" data-pjax="#js-repo-pjax-container">browser</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation">
+        <div class="repository-sidebar clearfix">
+            
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders" role="navigation" data-pjax="#js-repo-pjax-container" data-issue-count-url="/fnando/browser/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="./fnando_browser · GitHub_files/fnando_browser · GitHub.html" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /fnando/browser">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="https://github.com/fnando/browser/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /fnando/browser/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="counter">15</span>
+
+          <img alt="" class="mini-loader" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull requests">
+      <a href="https://github.com/fnando/browser/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /fnando/browser/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull requests</span>
+          <span class="counter">10</span>
+
+          <img alt="" class="mini-loader" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+</a>    </li>
+
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="https://github.com/fnando/browser/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /fnando/browser/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="https://github.com/fnando/browser/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /fnando/browser/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+              <div class="only-with-full-nav">
+                  
+<div class="clone-url open" data-protocol-type="http" data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/fnando/browser.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url " data-protocol-type="subversion" data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/fnando/browser" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<p class="clone-options">You can clone with
+  <a href="https://github.com/fnando/browser#" class="js-clone-selector" data-protocol="http">HTTPS</a> or <a href="https://github.com/fnando/browser#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+  <a href="https://mac.github.com/" class="btn btn-sm sidebar-button" title="Save fnando/browser to your computer and use it in GitHub Desktop." aria-label="Save fnando/browser to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+
+                <a href="https://github.com/fnando/browser/archive/master.zip" class="btn btn-sm sidebar-button" aria-label="Download the contents of fnando/browser as a zip file" title="Download the contents of fnando/browser as a zip file" rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container="">
+          
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description">
+      Do some browser detection with Ruby. Includes ActionController integration.
+    </div>
+
+
+
+</div>
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax="" href="https://github.com/fnando/browser/commits/master">
+            <span class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              216
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax="" href="https://github.com/fnando/browser/branches">
+          <span class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            4
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax="" href="https://github.com/fnando/browser/releases">
+          <span class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            20
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="https://github.com/fnando/browser/graphs/contributors">
+    <span class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      38
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="https://github.com/fnando/browser/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">100%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details">
+    <span class="language-color" aria-label="Ruby 100%" style="width:100%; background-color:#701516;" itemprop="keywords">Ruby</span>
+  </div>
+
+
+
+<div class="file-navigation in-mid-page">
+  <a href="https://github.com/fnando/browser/find/master" class="js-show-file-finder btn btn-sm empty-icon tooltipped tooltipped-s right" data-pjax="" data-hotkey="t" aria-label="Quickly jump between files">
+    <span class="octicon octicon-list-unordered"></span>
+  </a>
+    <a href="https://github.com/fnando/browser/compare" aria-label="Compare, review, create a pull request" class="btn btn-sm btn-primary tooltipped tooltipped-se left compare-button" data-pjax="" data-ga-click="Repository, go to compare view, location:repo overview; icon:git-compare">
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w" data-master-branch="master" data-ref="master" title="master" role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="https://github.com/fnando/browser#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="https://github.com/fnando/browser#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/fnando/browser/tree/chrome-frame" data-name="chrome-frame" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="chrome-frame">
+                chrome-frame
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected" href="https://github.com/fnando/browser/tree/master" data-name="master" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/fnando/browser/tree/master-copy" data-name="master-copy" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master-copy">
+                master-copy
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open " href="https://github.com/fnando/browser/tree/safari-webapp-mode" data-name="safari-webapp-mode" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="safari-webapp-mode">
+                safari-webapp-mode
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.8.0" data-name="v0.8.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.8.0">v0.8.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.7.2" data-name="v0.7.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.7.2">v0.7.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.7.1" data-name="v0.7.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.7.1">v0.7.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.7.0" data-name="v0.7.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.7.0">v0.7.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.6.0" data-name="v0.6.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.6.0">v0.6.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.5.0" data-name="v0.5.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.5.0">v0.5.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.4.1" data-name="v0.4.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.4.1">v0.4.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.4.0" data-name="v0.4.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.4.0">v0.4.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.3.2" data-name="v0.3.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.3.2">v0.3.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.3.1" data-name="v0.3.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.3.1">v0.3.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.3.0" data-name="v0.3.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.3.0">v0.3.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.2.1" data-name="v0.2.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.2.1">v0.2.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.2.0" data-name="v0.2.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.2.0">v0.2.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.1.6" data-name="v0.1.6" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.1.6">v0.1.6</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.1.5" data-name="v0.1.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.1.5">v0.1.5</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.1.4" data-name="v0.1.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.1.4">v0.1.4</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.1.3" data-name="v0.1.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.1.3">v0.1.3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.1.2" data-name="v0.1.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.1.2">v0.1.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.1.1" data-name="v0.1.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.1.1">v0.1.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/fnando/browser/tree/v0.1.0" data-name="v0.1.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v0.1.0">v0.1.0</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="breadcrumb"><span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="./fnando_browser · GitHub_files/fnando_browser · GitHub.html" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">browser</span></a></span></span><span class="separator">/</span>
+    <a class="btn-link disabled tooltipped tooltipped-e" href="https://github.com/fnando/browser#" aria-label="You must be signed in to make or propose changes">
+      <span class="octicon octicon-plus"></span>
+    </a>
+</div>
+</div>
+
+
+
+  
+  <div class="commit commit-tease js-details-container">
+    <p class="commit-title ">
+        <a href="https://github.com/fnando/browser/commit/6d5bbd05f84583c7c14ee587435aca325d9a0bc7" class="message" data-pjax="true" title="Merge pull request #143 from rossnoble/extra_windows_versions
+
+Add additional windows platform methods">Merge pull request</a> <a href="https://github.com/fnando/browser/pull/143" class="issue-link" title="Add additional windows platform methods">#143</a> <a href="https://github.com/fnando/browser/commit/6d5bbd05f84583c7c14ee587435aca325d9a0bc7" class="message" data-pjax="true" title="Merge pull request #143 from rossnoble/extra_windows_versions
+
+Add additional windows platform methods">from rossnoble/extra_windows_versions</a>
+        <span class="hidden-text-expander inline"><a href="https://github.com/fnando/browser#" class="js-details-target">…</a></span>
+    </p>
+      <div class="commit-desc"><pre>Add additional windows platform methods</pre></div>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link tooltipped tooltipped-s" data-clipboard-text="6d5bbd05f84583c7c14ee587435aca325d9a0bc7" data-copied-hint="Copied!" data-copy-hint="Copy SHA" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="https://github.com/fnando/browser/commit/6d5bbd05f84583c7c14ee587435aca325d9a0bc7" class="sha-block" data-pjax="">latest commit <span class="sha">6d5bbd05f8</span></a>
+
+      <div class="authorship">
+        <img alt="@fnando" class="avatar" data-user="3009" height="20" src="./fnando_browser · GitHub_files/3009" width="20">
+        <span class="author-name"><a href="https://github.com/fnando" rel="author">fnando</a></span>
+        authored <time class="updated" datetime="2015-04-18T15:47:45Z" is="relative-time" title="18 апр. 2015 г., 18:47 GMT+3">4 days ago</time>
+
+      </div>
+    </div>
+  </div>
+
+  
+<div class="file-wrap">
+  <a href="https://github.com/fnando/browser/tree/6d5bbd05f84583c7c14ee587435aca325d9a0bc7" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files" data-pjax="">
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/tree/master/gemfiles" class="js-directory-link" id="ac46a8b5a40536c4171a5ebee5aca2d4-7556391d635174d04c9a73c78b350c8851b67ece" title="gemfiles">gemfiles</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/74791b78b1d4c2b8da570010d65ca54001d2af6b" class="message" data-pjax="true" title="Ignoring Gemfile.lock.">Ignoring Gemfile.lock.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-02-07T10:11:14Z" is="time-ago" title="7 февр. 2014 г., 14:11 GMT+4">a year ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/tree/master/lib" class="js-directory-link" id="e8acc63b1e238f3255c900eed37254b8-432fe21d7c9b80535ed930f7f342a03f3a3697b4" title="lib">lib</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/fa43c16479a3fa995c61423996c65f163edee54f" class="message" data-pjax="true" title="Add platform methods for windows wow64">Add platform methods for windows wow64</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-03-06T17:47:45Z" is="time-ago" title="6 марта 2015 г., 20:47 GMT+3">2 months ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/tree/master/test" class="js-directory-link" id="098f6bcd4621d373cade4e832627b4f6-1d59457ed2b6a0eed9b760d404971896fd1921e2" title="test">test</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/6d5bbd05f84583c7c14ee587435aca325d9a0bc7" class="message" data-pjax="true" title="Merge pull request #143 from rossnoble/extra_windows_versions
+
+Add additional windows platform methods">Merge pull request</a> <a href="https://github.com/fnando/browser/pull/143" class="issue-link" title="Add additional windows platform methods">#143</a> <a href="https://github.com/fnando/browser/commit/6d5bbd05f84583c7c14ee587435aca325d9a0bc7" class="message" data-pjax="true" title="Merge pull request #143 from rossnoble/extra_windows_versions
+
+Add additional windows platform methods">from rossnoble/extra_windows_versions</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-04-18T15:47:45Z" is="time-ago" title="18 апр. 2015 г., 18:47 GMT+3">4 days ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-0ca8045c6890869b0b46afb47ecbb6bc1bf3f763" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/74791b78b1d4c2b8da570010d65ca54001d2af6b" class="message" data-pjax="true" title="Ignoring Gemfile.lock.">Ignoring Gemfile.lock.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-02-07T10:11:14Z" is="time-ago" title="7 февр. 2014 г., 14:11 GMT+4">a year ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/.hound.yml" class="js-directory-link" id="76553e1f3240402d88d463644bf1f06b-5811a8ece5af19f0edfbf0f01bb70e340ab480fd" title=".hound.yml">.hound.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/53f5e4fbb97b0c9058589e28c8cffbb689a2fa75" class="message" data-pjax="true" title="Change code style.">Change code style.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-05-03T03:49:05Z" is="time-ago" title="3 мая 2014 г., 7:49 GMT+4">a year ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/.rubocop.yml" class="js-directory-link" id="11a0d7906801d9dea0eccb85667ad811-5811a8ece5af19f0edfbf0f01bb70e340ab480fd" title=".rubocop.yml">.rubocop.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/9431a2fa96e1853f57206072a7a803b921a37a50" class="message" data-pjax="true" title="Add Rubocopy configuration file.">Add Rubocopy configuration file.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-02-09T16:29:07Z" is="time-ago" title="9 февр. 2015 г., 19:29 GMT+3">2 months ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/.travis.yml" class="js-directory-link" id="354f30a63fb0907d4ad57269548329e3-3f395eb58f788b1b848237f69ce1cd28f59936f4" title=".travis.yml">.travis.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/c07d34dcec1d7e9077a5784094c83ed4ff36e00d" class="message" data-pjax="true" title="Bump up ruby version for Travis.">Bump up ruby version for Travis.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-11-01T13:22:56Z" is="time-ago" title="1 нояб. 2014 г., 16:22 GMT+3">6 months ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/CONTRIBUTING.md" class="js-directory-link" id="6a3371457528722a734f3c51d9238c13-063816e720f3b69fb0f38a7baabe37dbc4ce2664" title="CONTRIBUTING.md">CONTRIBUTING.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/db8e8e3a7e4d90edb4ad9150ff90aac97d96e40e" class="message" data-pjax="true" title="Add contribution guidelines.">Add contribution guidelines.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-11-20T04:40:11Z" is="time-ago" title="20 нояб. 2014 г., 7:40 GMT+3">5 months ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/Gemfile" class="js-directory-link" id="8b7db4d5cc4b8f6dc8feb7030baa2478-1aa98e4b2eece6633b8b63f76a86deee015dc9ce" title="Gemfile">Gemfile</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/5e76172f4a7835c91c0fa896f81f18b866725aa7" class="message" data-pjax="true" title="Updated Rails 3 deps.">Updated Rails 3 deps.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-02-07T10:09:13Z" is="time-ago" title="7 февр. 2014 г., 14:09 GMT+4">a year ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-ef0c00c2805145596594c0eb8ecac5d916688cc1" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/b3141874b300ed1a42b6f51493c00153311d0c1f" class="message" data-pjax="true" title="Mention middleware request accessor in README">Mention middleware request accessor in README</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-02-09T16:28:05Z" is="time-ago" title="9 февр. 2015 г., 19:28 GMT+3">2 months ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/Rakefile" class="js-directory-link" id="52c976fc38ed2b4e3b1192f8a8e24cff-dd27f69355b9d71d698d889ab92eb80f39b67ccb" title="Rakefile">Rakefile</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/21485716b830fef6979c42b21771cbcb870984ce" class="message" data-pjax="true" title="Migrate to minitest.">Migrate to minitest.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-05-02T18:45:32Z" is="time-ago" title="2 мая 2014 г., 22:45 GMT+4">a year ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/bots.yml" class="js-directory-link" id="fdc5b9f5cf7b2369c6d0db162445de1a-dab09cf9747c30491e3b19a27ccac1d753bbf36d" title="bots.yml">bots.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/dfadf06b7a12373f9bf9d982f25272f0e45d10d0" class="message" data-pjax="true" title="Merge pull request #141 from coffeebite/patch-1
+
+Adding Wormly to bots">Merge pull request</a> <a href="https://github.com/fnando/browser/pull/141" class="issue-link" title="Adding Wormly to bots">#141</a> <a href="https://github.com/fnando/browser/commit/dfadf06b7a12373f9bf9d982f25272f0e45d10d0" class="message" data-pjax="true" title="Merge pull request #141 from coffeebite/patch-1
+
+Adding Wormly to bots">from coffeebite/patch-1</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-04-18T15:34:28Z" is="time-ago" title="18 апр. 2015 г., 18:34 GMT+3">4 days ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/browser.gemspec" class="js-directory-link" id="2e6e5b8f223d1b2d05b97c09f6291e1b-ec094e7930c8cae8d83a175aa63464081d1549d9" title="browser.gemspec">browser.gemspec</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/f1c0b4764530ebe586b78ccb762a3c996a062fda" class="message" data-pjax="true" title="Add license to gemspec">Add license to gemspec</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-02-09T16:28:05Z" is="time-ago" title="9 февр. 2015 г., 19:28 GMT+3">2 months ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/config.ru" class="js-directory-link" id="0a400c8217d53ff4f978163d7c61868c-51c86cb4e71e1fd53984b6d23557801842cfecf4" title="config.ru">config.ru</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/0bc7b167af32af25e3df310efa882416b6a4bced" class="message" data-pjax="true" title="Run tests in both Rails 3 and 4.">Run tests in both Rails 3 and 4.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2013-06-08T19:10:20Z" is="time-ago" title="8 июня 2013 г., 23:10 GMT+4">2 years ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/languages.yml" class="js-directory-link" id="f8a85918fbca022d0a8bbba6ee44c029-1b08ee7202af5c21b60c8729578f738da309295f" title="languages.yml">languages.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/53f5e4fbb97b0c9058589e28c8cffbb689a2fa75" class="message" data-pjax="true" title="Change code style.">Change code style.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-05-03T03:49:05Z" is="time-ago" title="3 мая 2014 г., 7:49 GMT+4">a year ago</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./fnando_browser · GitHub_files/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/fnando/browser/blob/master/search_engines.yml" class="js-directory-link" id="4cc126f49775e9e7c0b59e0dc9063574-01d71850761f66cbf645450204a3275467e8bf0a" title="search_engines.yml">search_engines.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/fnando/browser/commit/db1e7fa036c6dedf78aae8316bb970c64f44f08a" class="message" data-pjax="true" title="Detect most common search engines.">Detect most common search engines.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-05-20T12:35:45Z" is="time-ago" title="20 мая 2014 г., 16:35 GMT+4">11 months ago</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+  <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
+    <h3>
+      <span class="octicon octicon-book"></span>
+      README.md
+    </h3>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a id="user-content-browser" class="anchor" href="https://github.com/fnando/browser#browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Browser</h1>
+
+<p><a href="https://travis-ci.org/fnando/browser"><img src="./fnando_browser · GitHub_files/68747470733a2f2f7472617669732d63692e6f72672f666e616e646f2f62726f777365722e706e67" alt="Travis-CI" data-canonical-src="https://travis-ci.org/fnando/browser.png" style="max-width:100%;"></a>
+<a href="https://codeclimate.com/github/fnando/browser"><img src="./fnando_browser · GitHub_files/68747470733a2f2f636f6465636c696d6174652e636f6d2f6769746875622f666e616e646f2f62726f777365722e706e67" alt="CodeClimate" data-canonical-src="https://codeclimate.com/github/fnando/browser.png" style="max-width:100%;"></a>
+<a href="http://badge.fury.io/rb/browser"><img src="./fnando_browser · GitHub_files/68747470733a2f2f62616467652e667572792e696f2f72622f62726f777365722e737667" alt="Gem Version" data-canonical-src="https://badge.fury.io/rb/browser.svg" style="max-width:100%;"></a></p>
+
+<p>Do some browser detection with Ruby. Includes ActionController integration.</p>
+
+<h2>
+<a id="user-content-installation" class="anchor" href="https://github.com/fnando/browser#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<div class="highlight highlight-bash"><pre>gem install browser</pre></div>
+
+<h2>
+<a id="user-content-usage" class="anchor" href="https://github.com/fnando/browser#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>rubygems<span class="pl-pds">"</span></span>
+<span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>browser<span class="pl-pds">"</span></span>
+
+browser <span class="pl-k">=</span> <span class="pl-c1">Browser</span>.<span class="pl-k">new</span>(<span class="pl-c1">:ua</span> =&gt; <span class="pl-s"><span class="pl-pds">"</span>some string<span class="pl-pds">"</span></span>, <span class="pl-c1">:accept_language</span> =&gt; <span class="pl-s"><span class="pl-pds">"</span>en-us<span class="pl-pds">"</span></span>)
+browser.name            <span class="pl-c"># readable browser name</span>
+browser.version         <span class="pl-c"># major version number</span>
+browser.full_version
+browser.safari?
+browser.opera?
+browser.chrome?
+browser.chrome_os?
+browser.mobile?
+browser.tablet?
+browser.console?
+browser.firefox?
+browser.ie?
+browser.ie6?            <span class="pl-c"># this goes up to 11</span>
+browser.modern?         <span class="pl-c"># Webkit, Firefox 17+, IE 9+ and Opera 12+</span>
+browser.platform        <span class="pl-c"># return :mac, :windows, :linux or :other</span>
+browser.mac?
+browser.windows?
+browser.windows_x64?
+browser.linux?
+browser.blackberry?
+browser.bot?
+browser.search_engine?
+browser.phantom_js?
+browser.quicktime?
+browser.core_media?
+browser.silk?
+browser.known?          <span class="pl-c"># has the browser been successfully detected?</span>
+browser.meta            <span class="pl-c"># an array with several attributes</span>
+browser.to_s            <span class="pl-c"># the meta info joined by space</span></pre></div>
+
+<p>See the <a href="https://github.com/fnando/browser/blob/master/test/browser_spec.rb">tests</a> and <a href="https://github.com/fnando/browser/blob/master/lib/browser.rb">implementation</a> for more examples.</p>
+
+<h3>
+<a id="user-content-what-defines-a-modern-browser" class="anchor" href="https://github.com/fnando/browser#what-defines-a-modern-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>What defines a modern browser?</h3>
+
+<p>The current rules that define a modern browser are pretty loose:</p>
+
+<ul class="task-list">
+<li>Webkit</li>
+<li>IE9+</li>
+<li>Firefox 17+</li>
+<li>Firefox Tablet 14+</li>
+<li>Opera 12+</li>
+</ul>
+
+<p>You can define your your rules. A rule must be a proc/lambda or any object that implements the method === and accepts the browser object. To redefine all rules, clear the existing rules before adding your own.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-c"># Only Chrome Canary is considered modern.</span>
+<span class="pl-c1">Browser</span>.modern_rules.clear
+<span class="pl-c1">Browser</span>.modern_rules <span class="pl-k">&lt;&lt;</span> <span class="pl-k">-</span><span class="pl-k">&gt;</span> b { b.chrome? <span class="pl-k">&amp;&amp;</span> b.version <span class="pl-k">&gt;=</span> <span class="pl-s"><span class="pl-pds">'</span>37<span class="pl-pds">'</span></span> }</pre></div>
+
+<h3>
+<a id="user-content-rails-integration" class="anchor" href="https://github.com/fnando/browser#rails-integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rails integration</h3>
+
+<p>Just add it to the Gemfile.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">"</span>browser<span class="pl-pds">"</span></span></pre></div>
+
+<p>This adds a helper method called <code>browser</code>, that inspects your current user agent.</p>
+
+<div class="highlight highlight-erb"><pre><span class="pl-pse">&lt;%</span><span class="pl-s1"> <span class="pl-k">if</span> browser.ie6? </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span>
+  &lt;<span class="pl-ent">p</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>disclaimer<span class="pl-pds">"</span></span>&gt;You're running an older IE version. Please update it!&lt;/<span class="pl-ent">p</span>&gt;
+<span class="pl-pse">&lt;%</span><span class="pl-s1"> <span class="pl-k">end</span> </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span></pre></div>
+
+<h3>
+<a id="user-content-bots" class="anchor" href="https://github.com/fnando/browser#bots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bots</h3>
+
+<p>Browser used to detect empty user agents as bots, but this behaviour has changed. If you want to bring this detection back, you can activate it through the following call:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-c1">Browser</span>::<span class="pl-c1">Bots</span>.detect_empty_ua!</pre></div>
+
+<h3>
+<a id="user-content-middleware" class="anchor" href="https://github.com/fnando/browser#middleware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Middleware</h3>
+
+<p>You can use the <code>Browser::Middleware</code> to redirect user agents.</p>
+
+<div class="highlight highlight-ruby"><pre>use <span class="pl-c1">Browser</span>::<span class="pl-c1">Middleware</span> <span class="pl-k">do</span>
+  redirect_to <span class="pl-s"><span class="pl-pds">"</span>/upgrade<span class="pl-pds">"</span></span> <span class="pl-k">unless</span> browser.modern?
+<span class="pl-k">end</span></pre></div>
+
+<p>If you're using Rails, you can use the route helper methods. Just add something like the following to a initializer file (<code>config/initializers/browser.rb</code>).</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-c1">Rails</span>.configuration.middleware.use <span class="pl-c1">Browser</span>::<span class="pl-c1">Middleware</span> <span class="pl-k">do</span>
+  redirect_to upgrade_path <span class="pl-k">unless</span> browser.modern?
+<span class="pl-k">end</span></pre></div>
+
+<p>Notice that you can have multiple conditionals.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-c1">Rails</span>.configuration.middleware.use <span class="pl-c1">Browser</span>::<span class="pl-c1">Middleware</span> <span class="pl-k">do</span>
+  <span class="pl-k">next</span> <span class="pl-k">if</span> browser.search_engine?
+  redirect_to upgrade_path(<span class="pl-c1">browser:</span> <span class="pl-s"><span class="pl-pds">"</span>oldie<span class="pl-pds">"</span></span>) <span class="pl-k">if</span> browser.ie? <span class="pl-k">&amp;&amp;</span> <span class="pl-k">!</span>browser.modern?
+  redirect_to upgrade_path(<span class="pl-c1">browser:</span> <span class="pl-s"><span class="pl-pds">"</span>oldfx<span class="pl-pds">"</span></span>) <span class="pl-k">if</span> browser.firefox? <span class="pl-k">&amp;&amp;</span> <span class="pl-k">!</span>browser.modern?
+<span class="pl-k">end</span></pre></div>
+
+<p>If you need acccess to the <code>Rack::Request</code> object (e.g. to exclude a path), you can do so with <code>request</code>.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-c1">Rails</span>.configuration.middleware.use <span class="pl-c1">Browser</span>::<span class="pl-c1">Middleware</span> <span class="pl-k">do</span>
+  redirect_to upgrade_path <span class="pl-k">unless</span> browser.modern? <span class="pl-k">||</span> request.env[<span class="pl-s"><span class="pl-pds">'</span>PATH_INFO<span class="pl-pds">'</span></span>] <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>/exclude_me<span class="pl-pds">'</span></span>
+<span class="pl-k">end</span></pre></div>
+
+<h2>
+<a id="user-content-maintainer" class="anchor" href="https://github.com/fnando/browser#maintainer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maintainer</h2>
+
+<ul class="task-list">
+<li>Nando Vieira - <a href="http://nandovieira.com.br/">http://nandovieira.com.br</a>
+</li>
+</ul>
+
+<h2>
+<a id="user-content-contributors" class="anchor" href="https://github.com/fnando/browser#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<ul class="task-list">
+<li><a href="https://github.com/fnando/browser/contributors">https://github.com/fnando/browser/contributors</a></li>
+</ul>
+
+<h2>
+<a id="user-content-license" class="anchor" href="https://github.com/fnando/browser#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>(The MIT License)</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com/" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>© 2015 <span title="0.03973s from github-fe119-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea>
+      <div class="suggester-container">
+        <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="https://github.com/fnando/browser#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="https://github.com/fnando/browser#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="https://github.com/fnando/browser#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="./fnando_browser · GitHub_files/frameworks-2c8ae50712a47d2b83d740cb875d55cdbbb3fdbccf303951cc6b7e63731e0c38.js"></script>
+      <script async="async" crossorigin="anonymous" src="./fnando_browser · GitHub_files/github-3db81a421ebe0d913a89557241623ecef42b40a31f8425a3f46f09d84b0028a1.js"></script>
+      
+      
+
+
+  
+
+
+<nav class="octotree_sidebar ui-resizable" style="width: 352px;">
+    <a class="octotree_toggle btn"><div class="loader"></div><span></span></a>
+    <a class="octotree_opts" href="javascript:void(0)"><span></span></a>
+    <div class="octotree_views">
+      <div class="octotree_view octotree_treeview current">
+        <div class="octotree_view_header"><div class="octotree_header_repo"><a href="https://github.com/fnando">fnando</a> / <a data-pjax="" href="./fnando_browser · GitHub_files/fnando_browser · GitHub.html">browser</a></div><div class="octotree_header_branch">master</div></div>
+        <div class="octotree_view_body jstree jstree-1 jstree-default jstree-leaf" role="tree" tabindex="0" aria-activedescendant="octotreegemfiles" aria-busy="false"><ul class="jstree-container-ul jstree-children jstree-wholerow-ul jstree-no-dots" role="group"><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreegemfiles_anchor" aria-expanded="false" id="octotreegemfiles" class="jstree-node  jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser#" tabindex="-1" id="octotreegemfiles_anchor"><i class="jstree-icon jstree-themeicon tree jstree-themeicon-custom" role="presentation"></i>gemfiles</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreelib_anchor" aria-expanded="false" id="octotreelib" class="jstree-node  jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser#" tabindex="-1" id="octotreelib_anchor"><i class="jstree-icon jstree-themeicon tree jstree-themeicon-custom" role="presentation"></i>lib</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreetest_anchor" aria-expanded="false" id="octotreetest" class="jstree-node  jstree-closed"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser#" tabindex="-1" id="octotreetest_anchor"><i class="jstree-icon jstree-themeicon tree jstree-themeicon-custom" role="presentation"></i>test</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotree.gitignore_anchor" id="octotree.gitignore" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/.gitignore" tabindex="-1" id="octotree.gitignore_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>.gitignore</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotree.hound.yml_anchor" id="octotree.hound.yml" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/.hound.yml" tabindex="-1" id="octotree.hound.yml_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>.hound.yml</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotree.rubocop.yml_anchor" id="octotree.rubocop.yml" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/.rubocop.yml" tabindex="-1" id="octotree.rubocop.yml_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>.rubocop.yml</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotree.travis.yml_anchor" id="octotree.travis.yml" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/.travis.yml" tabindex="-1" id="octotree.travis.yml_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>.travis.yml</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeCONTRIBUTING.md_anchor" id="octotreeCONTRIBUTING.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/CONTRIBUTING.md" tabindex="-1" id="octotreeCONTRIBUTING.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>CONTRIBUTING.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeGemfile_anchor" id="octotreeGemfile" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/Gemfile" tabindex="-1" id="octotreeGemfile_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>Gemfile</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeREADME.md_anchor" id="octotreeREADME.md" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/README.md" tabindex="-1" id="octotreeREADME.md_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>README.md</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeRakefile_anchor" id="octotreeRakefile" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/Rakefile" tabindex="-1" id="octotreeRakefile_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>Rakefile</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreebots.yml_anchor" id="octotreebots.yml" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/bots.yml" tabindex="-1" id="octotreebots.yml_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>bots.yml</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreebrowser.gemspec_anchor" id="octotreebrowser.gemspec" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/browser.gemspec" tabindex="-1" id="octotreebrowser.gemspec_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>browser.gemspec</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreeconfig.ru_anchor" id="octotreeconfig.ru" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/config.ru" tabindex="-1" id="octotreeconfig.ru_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>config.ru</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreelanguages.yml_anchor" id="octotreelanguages.yml" class="jstree-node  jstree-leaf"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/languages.yml" tabindex="-1" id="octotreelanguages.yml_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>languages.yml</a></li><li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="octotreesearch_engines.yml_anchor" id="octotreesearch_engines.yml" class="jstree-node  jstree-leaf jstree-last"><div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="https://github.com/fnando/browser/blob/master/search_engines.yml" tabindex="-1" id="octotreesearch_engines.yml_anchor"><i class="jstree-icon jstree-themeicon blob jstree-themeicon-custom" role="presentation"></i>search_engines.yml</a></li></ul></div>
+      </div>
+
+      <div class="octotree_view octotree_errorview">
+        <div class="octotree_view_header"></div>
+        <form class="octotree_view_body">
+          <div class="message"></div>
+          <div>
+            <input name="token" type="text" placeholder="Paste access token here" autocomplete="off">
+          </div>
+          <div>
+            <button type="submit" class="btn">Save</button>
+            <a href="https://github.com/buunguyen/octotree#github-access-token" target="_blank" tabindex="-1">Why is this required?</a>
+          </div>
+          <div class="error"></div>
+        </form>
+      </div>
+
+      <div class="octotree_view octotree_optsview">
+        <div class="octotree_view_header">Settings</div>
+        <form class="octotree_view_body">
+          <div>
+            <div>
+              <label>Site access token</label>
+              <a href="https://github.com/buunguyen/octotree#github-access-token" target="_blank" tabindex="-1">what's this?</a>
+            </div>
+            <input type="text" data-store="TOKEN" data-perhost="true">
+          </div>
+          <div>
+            <div>
+              <label>GitHub Enterprise URLs</label>
+            </div>
+            <textarea data-store="GHEURLS" placeholder="https://github.mysite1.com/                                        https://github.mysite2.com/">            </textarea>
+          </div>
+          <hr>
+          <div>
+            <label><input type="checkbox" data-store="REMEMBER"> Show sidebar if previously shown</label>
+          </div>
+          <div>
+            <label><input type="checkbox" data-store="NONCODE"> Show in non-code pages</label>
+          </div>
+          <div>
+            <label><input type="checkbox" data-store="LAZYLOAD"> Only load tree when sidebar is open</label>
+          </div>
+          <div>
+            <label><input type="checkbox" data-store="COLLAPSE"> Collapse folders with single sub-folder</label>
+          </div>
+          <div>
+            <div>
+              <label>Hotkeys</label>
+              <a href="https://github.com/madrobby/keymaster#defining-shortcuts" target="_blank" tabindex="-1">supported keys</a>
+            </div>
+            <input type="text" data-store="HOTKEYS">
+          </div>
+          <div>
+            <div>
+              <label>Tab size</label>
+              <a href="https://github.com/tiimgreen/github-cheat-sheet#adjust-tab-space" target="_blank" tabindex="-1">what's this?</a>
+            </div>
+            <input type="text" data-store="TABSIZE">
+          </div>
+          <div>
+            <button type="submit" class="btn">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div></nav><div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 1px; height: 1px; z-index: 999999999;"><object id="global-zeroclipboard-flash-bridge" name="global-zeroclipboard-flash-bridge" width="100%" height="100%" type="application/x-shockwave-flash" data="https://assets-cdn.github.com/flash/ZeroClipboard.v2.1.6.swf"><param name="allowScriptAccess" value="always"><param name="allowNetworking" value="all"><param name="menu" value="false"><param name="wmode" value="transparent"><param name="flashvars" value="trustedOrigins=github.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com&amp;swfObjectId=global-zeroclipboard-flash-bridge"></object></div></body></html>

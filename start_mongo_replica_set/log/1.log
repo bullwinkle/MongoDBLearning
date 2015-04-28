@@ -1,0 +1,211 @@
+2015-04-28T19:58:23.067+0300 I JOURNAL  [initandlisten] journal dir=/data/db/rs1/journal
+2015-04-28T19:58:23.067+0300 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-04-28T19:58:23.087+0300 I JOURNAL  [durability] Durability thread started
+2015-04-28T19:58:23.087+0300 I JOURNAL  [journal writer] Journal writer thread started
+2015-04-28T19:58:23.087+0300 I CONTROL  [initandlisten] MongoDB starting : pid=7273 port=27017 dbpath=/data/db/rs1 64-bit host=D-galnykin.local
+2015-04-28T19:58:23.087+0300 I CONTROL  [initandlisten] db version v3.0.1
+2015-04-28T19:58:23.088+0300 I CONTROL  [initandlisten] git version: 534b5a3f9d10f00cd27737fbcd951032248b5952
+2015-04-28T19:58:23.088+0300 I CONTROL  [initandlisten] build info: Darwin bs-osx108-7 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-04-28T19:58:23.088+0300 I CONTROL  [initandlisten] allocator: system
+2015-04-28T19:58:23.088+0300 I CONTROL  [initandlisten] options: { net: { port: 27017 }, processManagement: { fork: true }, replication: { oplogSizeMB: 64, replSet: "m101" }, storage: { dbPath: "/data/db/rs1", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "log/1.log" } }
+2015-04-28T19:58:23.089+0300 I INDEX    [initandlisten] allocating new ns file /data/db/rs1/local.ns, filling with zeroes...
+2015-04-28T19:58:23.515+0300 I STORAGE  [FileAllocator] allocating new datafile /data/db/rs1/local.0, filling with zeroes...
+2015-04-28T19:58:23.515+0300 I STORAGE  [FileAllocator] creating directory /data/db/rs1/_tmp
+2015-04-28T19:58:23.774+0300 I STORAGE  [FileAllocator] done allocating datafile /data/db/rs1/local.0, size: 16MB,  took 0.257 secs
+2015-04-28T19:58:24.765+0300 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument Did not find replica set configuration document in local.system.replset
+2015-04-28T19:58:25.040+0300 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-04-28T19:58:25.938+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56956 #1 (1 connection now open)
+2015-04-28T19:58:25.945+0300 I NETWORK  [conn1] end connection 127.0.0.1:56956 (0 connections now open)
+2015-04-28T19:58:26.062+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56957 #2 (1 connection now open)
+2015-04-28T19:58:26.062+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56958 #3 (2 connections now open)
+2015-04-28T19:58:26.062+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56959 #4 (3 connections now open)
+2015-04-28T19:58:26.062+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56960 #5 (4 connections now open)
+2015-04-28T19:58:26.062+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56961 #6 (5 connections now open)
+2015-04-28T19:58:26.067+0300 I REPL     [conn3] replSetInitiate admin command received from client
+2015-04-28T19:58:28.622+0300 I REPL     [conn3] replSet replSetInitiate config object with 3 members parses ok
+2015-04-28T19:58:28.630+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:56969 #7 (6 connections now open)
+2015-04-28T19:58:28.631+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:56970 #8 (7 connections now open)
+2015-04-28T19:58:28.633+0300 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "m101", version: 1, members: [ { _id: 0, host: "D-galnykin.local:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "D-galnykin.local:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "D-galnykin.local:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatTimeoutSecs: 10, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 } } }
+2015-04-28T19:58:28.633+0300 I REPL     [ReplicationExecutor] This node is D-galnykin.local:27017 in the config
+2015-04-28T19:58:28.633+0300 I REPL     [ReplicationExecutor] transition to STARTUP2
+2015-04-28T19:58:28.634+0300 I REPL     [conn3] ******
+2015-04-28T19:58:28.634+0300 I REPL     [conn3] creating replication oplog of size: 64MB...
+2015-04-28T19:58:28.634+0300 I REPL     [ReplicationExecutor] Member D-galnykin.local:27018 is now in state STARTUP
+2015-04-28T19:58:28.634+0300 I STORAGE  [FileAllocator] allocating new datafile /data/db/rs1/local.1, filling with zeroes...
+2015-04-28T19:58:28.634+0300 I REPL     [ReplicationExecutor] Member D-galnykin.local:27019 is now in state STARTUP
+2015-04-28T19:58:30.637+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:56971 #9 (8 connections now open)
+2015-04-28T19:58:30.638+0300 I NETWORK  [conn9] end connection 192.168.11.135:56971 (7 connections now open)
+2015-04-28T19:58:30.638+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:56972 #10 (8 connections now open)
+2015-04-28T19:58:30.639+0300 I NETWORK  [conn10] end connection 192.168.11.135:56972 (7 connections now open)
+2015-04-28T19:58:32.640+0300 I REPL     [ReplicationExecutor] Member D-galnykin.local:27018 is now in state STARTUP2
+2015-04-28T19:58:32.641+0300 I REPL     [ReplicationExecutor] Member D-galnykin.local:27019 is now in state STARTUP2
+2015-04-28T19:58:34.675+0300 I STORAGE  [FileAllocator] done allocating datafile /data/db/rs1/local.1, size: 128MB,  took 6.039 secs
+2015-04-28T19:58:35.222+0300 I STORAGE  [conn3] MmapV1ExtentManager took 6 seconds to open: /data/db/rs1/local.1
+2015-04-28T19:58:35.244+0300 I REPL     [conn3] ******
+2015-04-28T19:58:35.244+0300 I REPL     [conn3] Starting replication applier threads
+2015-04-28T19:58:35.245+0300 I COMMAND  [conn3] command admin.$cmd command: replSetInitiate { replSetInitiate: { _id: "m101", members: [ { _id: 0, host: "D-galnykin.local:27017" }, { _id: 1, host: "D-galnykin.local:27018" }, { _id: 2, host: "D-galnykin.local:27019" } ] } } keyUpdates:0 writeConflicts:0 numYields:0 reslen:37 locks:{} 9177ms
+2015-04-28T19:58:35.245+0300 I REPL     [ReplicationExecutor] transition to RECOVERING
+2015-04-28T19:58:35.246+0300 I REPL     [ReplicationExecutor] transition to SECONDARY
+2015-04-28T19:58:35.247+0300 I NETWORK  [conn2] end connection 127.0.0.1:56957 (6 connections now open)
+2015-04-28T19:58:35.248+0300 I NETWORK  [conn3] end connection 127.0.0.1:56958 (6 connections now open)
+2015-04-28T19:58:35.248+0300 I NETWORK  [conn4] end connection 127.0.0.1:56959 (6 connections now open)
+2015-04-28T19:58:35.248+0300 I NETWORK  [conn5] end connection 127.0.0.1:56960 (6 connections now open)
+2015-04-28T19:58:35.248+0300 I NETWORK  [conn6] end connection 127.0.0.1:56961 (6 connections now open)
+2015-04-28T19:58:35.420+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56983 #11 (3 connections now open)
+2015-04-28T19:58:35.420+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56984 #12 (4 connections now open)
+2015-04-28T19:58:35.421+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56985 #13 (5 connections now open)
+2015-04-28T19:58:35.421+0300 I NETWORK  [conn11] end connection 127.0.0.1:56983 (4 connections now open)
+2015-04-28T19:58:35.423+0300 I NETWORK  [conn12] end connection 127.0.0.1:56984 (3 connections now open)
+2015-04-28T19:58:35.425+0300 I NETWORK  [conn13] end connection 127.0.0.1:56985 (2 connections now open)
+2015-04-28T19:58:35.542+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56986 #14 (3 connections now open)
+2015-04-28T19:58:35.543+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56987 #15 (4 connections now open)
+2015-04-28T19:58:35.543+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56988 #16 (5 connections now open)
+2015-04-28T19:58:35.543+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56989 #17 (6 connections now open)
+2015-04-28T19:58:35.544+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56990 #18 (7 connections now open)
+2015-04-28T19:58:35.544+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56991 #19 (8 connections now open)
+2015-04-28T19:58:35.544+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56992 #20 (9 connections now open)
+2015-04-28T19:58:35.544+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56993 #21 (10 connections now open)
+2015-04-28T19:58:35.544+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56994 #22 (11 connections now open)
+2015-04-28T19:58:35.545+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56995 #23 (12 connections now open)
+2015-04-28T19:58:35.545+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56996 #24 (13 connections now open)
+2015-04-28T19:58:35.545+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56997 #25 (14 connections now open)
+2015-04-28T19:58:35.545+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56998 #26 (15 connections now open)
+2015-04-28T19:58:35.545+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56999 #27 (16 connections now open)
+2015-04-28T19:58:35.545+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57000 #28 (17 connections now open)
+2015-04-28T19:58:35.550+0300 I NETWORK  [conn19] end connection 127.0.0.1:56991 (16 connections now open)
+2015-04-28T19:58:35.550+0300 I NETWORK  [conn20] end connection 127.0.0.1:56992 (15 connections now open)
+2015-04-28T19:58:35.550+0300 I NETWORK  [conn22] end connection 127.0.0.1:56994 (15 connections now open)
+2015-04-28T19:58:35.550+0300 I NETWORK  [conn21] end connection 127.0.0.1:56993 (15 connections now open)
+2015-04-28T19:58:35.550+0300 I NETWORK  [conn23] end connection 127.0.0.1:56995 (15 connections now open)
+2015-04-28T19:58:35.554+0300 I NETWORK  [conn25] end connection 127.0.0.1:56997 (11 connections now open)
+2015-04-28T19:58:35.554+0300 I NETWORK  [conn24] end connection 127.0.0.1:56996 (11 connections now open)
+2015-04-28T19:58:35.554+0300 I NETWORK  [conn26] end connection 127.0.0.1:56998 (11 connections now open)
+2015-04-28T19:58:35.554+0300 I NETWORK  [conn27] end connection 127.0.0.1:56999 (11 connections now open)
+2015-04-28T19:58:35.554+0300 I NETWORK  [conn28] end connection 127.0.0.1:57000 (11 connections now open)
+2015-04-28T19:58:36.649+0300 I REPL     [ReplicationExecutor] Standing for election
+2015-04-28T19:58:37.054+0300 I REPL     [ReplicationExecutor] not electing self, D-galnykin.local:27018 would veto with 'I don't think D-galnykin.local:27017 is electable because the member is not currently a secondary (mask 0x8)'
+2015-04-28T19:58:37.054+0300 I REPL     [ReplicationExecutor] not electing self, we are not freshest
+2015-04-28T19:58:38.654+0300 I REPL     [ReplicationExecutor] Standing for election
+2015-04-28T19:58:38.654+0300 I REPL     [ReplicationExecutor] replSet info electSelf
+2015-04-28T19:58:38.655+0300 I REPL     [ReplicationExecutor] replSet election succeeded, assuming primary role
+2015-04-28T19:58:38.655+0300 I REPL     [ReplicationExecutor] transition to PRIMARY
+2015-04-28T19:58:39.263+0300 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2015-04-28T19:58:45.441+0300 I NETWORK  [conn15] end connection 127.0.0.1:56987 (6 connections now open)
+2015-04-28T19:58:45.441+0300 I NETWORK  [conn14] end connection 127.0.0.1:56986 (6 connections now open)
+2015-04-28T19:58:45.441+0300 I NETWORK  [conn16] end connection 127.0.0.1:56988 (6 connections now open)
+2015-04-28T19:58:45.441+0300 I NETWORK  [conn17] end connection 127.0.0.1:56989 (6 connections now open)
+2015-04-28T19:58:45.441+0300 I NETWORK  [conn18] end connection 127.0.0.1:56990 (6 connections now open)
+2015-04-28T19:58:52.115+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57021 #29 (3 connections now open)
+2015-04-28T19:58:52.123+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57022 #30 (4 connections now open)
+2015-04-28T19:58:52.138+0300 I NETWORK  [conn29] end connection 192.168.11.135:57021 (3 connections now open)
+2015-04-28T19:58:52.144+0300 I NETWORK  [conn30] end connection 192.168.11.135:57022 (2 connections now open)
+2015-04-28T19:58:52.682+0300 I REPL     [ReplicationExecutor] Member D-galnykin.local:27018 is now in state SECONDARY
+2015-04-28T19:58:52.683+0300 I REPL     [ReplicationExecutor] Member D-galnykin.local:27019 is now in state SECONDARY
+2015-04-28T19:58:59.107+0300 I NETWORK  [conn8] end connection 192.168.11.135:56970 (1 connection now open)
+2015-04-28T19:58:59.107+0300 I NETWORK  [conn7] end connection 192.168.11.135:56969 (1 connection now open)
+2015-04-28T19:58:59.110+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57042 #31 (1 connection now open)
+2015-04-28T19:58:59.112+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57043 #32 (2 connections now open)
+2015-04-28T19:59:29.172+0300 I NETWORK  [conn31] end connection 192.168.11.135:57042 (1 connection now open)
+2015-04-28T19:59:29.174+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57063 #33 (2 connections now open)
+2015-04-28T19:59:29.181+0300 I NETWORK  [conn32] end connection 192.168.11.135:57043 (1 connection now open)
+2015-04-28T19:59:29.182+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57064 #34 (2 connections now open)
+2015-04-28T19:59:59.235+0300 I NETWORK  [conn33] end connection 192.168.11.135:57063 (1 connection now open)
+2015-04-28T19:59:59.238+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57071 #35 (2 connections now open)
+2015-04-28T19:59:59.247+0300 I NETWORK  [conn34] end connection 192.168.11.135:57064 (1 connection now open)
+2015-04-28T19:59:59.249+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57072 #36 (2 connections now open)
+2015-04-28T20:00:29.304+0300 I NETWORK  [conn35] end connection 192.168.11.135:57071 (1 connection now open)
+2015-04-28T20:00:29.306+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57078 #37 (2 connections now open)
+2015-04-28T20:00:29.312+0300 I NETWORK  [conn36] end connection 192.168.11.135:57072 (1 connection now open)
+2015-04-28T20:00:29.314+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57079 #38 (2 connections now open)
+2015-04-28T20:00:44.964+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57090 #39 (3 connections now open)
+2015-04-28T20:00:44.974+0300 I NETWORK  [conn39] end connection 127.0.0.1:57090 (2 connections now open)
+2015-04-28T20:00:44.981+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57091 #40 (3 connections now open)
+2015-04-28T20:00:44.982+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57092 #41 (4 connections now open)
+2015-04-28T20:00:44.983+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57093 #42 (5 connections now open)
+2015-04-28T20:00:44.984+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57094 #43 (6 connections now open)
+2015-04-28T20:00:44.984+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57095 #44 (7 connections now open)
+2015-04-28T20:00:45.025+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57106 #45 (8 connections now open)
+2015-04-28T20:00:45.025+0300 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:57107 #46 (9 connections now open)
+2015-04-28T20:00:45.031+0300 I NETWORK  [conn40] end connection 127.0.0.1:57091 (8 connections now open)
+2015-04-28T20:00:45.031+0300 I NETWORK  [conn41] end connection 127.0.0.1:57092 (8 connections now open)
+2015-04-28T20:00:45.032+0300 I NETWORK  [conn42] end connection 127.0.0.1:57093 (8 connections now open)
+2015-04-28T20:00:45.032+0300 I NETWORK  [conn43] end connection 127.0.0.1:57094 (8 connections now open)
+2015-04-28T20:00:45.032+0300 I NETWORK  [conn44] end connection 127.0.0.1:57095 (7 connections now open)
+2015-04-28T20:00:45.034+0300 I NETWORK  [conn45] end connection 127.0.0.1:57106 (3 connections now open)
+2015-04-28T20:00:45.035+0300 I NETWORK  [conn46] end connection 127.0.0.1:57107 (2 connections now open)
+2015-04-28T20:00:59.369+0300 I NETWORK  [conn37] end connection 192.168.11.135:57078 (1 connection now open)
+2015-04-28T20:00:59.369+0300 I NETWORK  [conn38] end connection 192.168.11.135:57079 (1 connection now open)
+2015-04-28T20:00:59.372+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57117 #47 (1 connection now open)
+2015-04-28T20:00:59.374+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57118 #48 (2 connections now open)
+2015-04-28T20:01:29.430+0300 I NETWORK  [conn47] end connection 192.168.11.135:57117 (1 connection now open)
+2015-04-28T20:01:29.433+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57125 #49 (2 connections now open)
+2015-04-28T20:01:29.435+0300 I NETWORK  [conn48] end connection 192.168.11.135:57118 (1 connection now open)
+2015-04-28T20:01:29.436+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57126 #50 (2 connections now open)
+2015-04-28T20:01:59.502+0300 I NETWORK  [conn49] end connection 192.168.11.135:57125 (1 connection now open)
+2015-04-28T20:01:59.502+0300 I NETWORK  [conn50] end connection 192.168.11.135:57126 (1 connection now open)
+2015-04-28T20:01:59.505+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57151 #51 (1 connection now open)
+2015-04-28T20:01:59.506+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57152 #52 (2 connections now open)
+2015-04-28T20:02:29.556+0300 I NETWORK  [conn52] end connection 192.168.11.135:57152 (1 connection now open)
+2015-04-28T20:02:29.556+0300 I NETWORK  [conn51] end connection 192.168.11.135:57151 (1 connection now open)
+2015-04-28T20:02:29.558+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57157 #53 (1 connection now open)
+2015-04-28T20:02:29.559+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57158 #54 (2 connections now open)
+2015-04-28T20:02:59.604+0300 I NETWORK  [conn53] end connection 192.168.11.135:57157 (1 connection now open)
+2015-04-28T20:02:59.604+0300 I NETWORK  [conn54] end connection 192.168.11.135:57158 (1 connection now open)
+2015-04-28T20:02:59.606+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57163 #55 (1 connection now open)
+2015-04-28T20:02:59.607+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57164 #56 (2 connections now open)
+2015-04-28T20:03:29.678+0300 I NETWORK  [conn56] end connection 192.168.11.135:57164 (1 connection now open)
+2015-04-28T20:03:29.678+0300 I NETWORK  [conn55] end connection 192.168.11.135:57163 (1 connection now open)
+2015-04-28T20:03:29.681+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57226 #57 (1 connection now open)
+2015-04-28T20:03:29.682+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57227 #58 (2 connections now open)
+2015-04-28T20:03:59.730+0300 I NETWORK  [conn58] end connection 192.168.11.135:57227 (1 connection now open)
+2015-04-28T20:03:59.730+0300 I NETWORK  [conn57] end connection 192.168.11.135:57226 (1 connection now open)
+2015-04-28T20:03:59.733+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57241 #59 (1 connection now open)
+2015-04-28T20:03:59.734+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57242 #60 (2 connections now open)
+2015-04-28T20:04:29.775+0300 I NETWORK  [conn59] end connection 192.168.11.135:57241 (1 connection now open)
+2015-04-28T20:04:29.775+0300 I NETWORK  [conn60] end connection 192.168.11.135:57242 (0 connections now open)
+2015-04-28T20:04:29.777+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57248 #61 (1 connection now open)
+2015-04-28T20:04:29.777+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57249 #62 (2 connections now open)
+2015-04-28T20:04:59.823+0300 I NETWORK  [conn61] end connection 192.168.11.135:57248 (1 connection now open)
+2015-04-28T20:04:59.823+0300 I NETWORK  [conn62] end connection 192.168.11.135:57249 (1 connection now open)
+2015-04-28T20:04:59.825+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57255 #63 (1 connection now open)
+2015-04-28T20:04:59.826+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57256 #64 (2 connections now open)
+2015-04-28T20:05:29.869+0300 I NETWORK  [conn63] end connection 192.168.11.135:57255 (1 connection now open)
+2015-04-28T20:05:29.870+0300 I NETWORK  [conn64] end connection 192.168.11.135:57256 (1 connection now open)
+2015-04-28T20:05:29.872+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57261 #65 (1 connection now open)
+2015-04-28T20:05:29.874+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57262 #66 (2 connections now open)
+2015-04-28T20:05:59.919+0300 I NETWORK  [conn65] end connection 192.168.11.135:57261 (1 connection now open)
+2015-04-28T20:05:59.919+0300 I NETWORK  [conn66] end connection 192.168.11.135:57262 (1 connection now open)
+2015-04-28T20:05:59.921+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57279 #67 (1 connection now open)
+2015-04-28T20:05:59.921+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57280 #68 (2 connections now open)
+2015-04-28T20:06:29.981+0300 I NETWORK  [conn67] end connection 192.168.11.135:57279 (1 connection now open)
+2015-04-28T20:06:29.981+0300 I NETWORK  [conn68] end connection 192.168.11.135:57280 (1 connection now open)
+2015-04-28T20:06:29.983+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57316 #69 (1 connection now open)
+2015-04-28T20:06:29.984+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57317 #70 (2 connections now open)
+2015-04-28T20:07:00.041+0300 I NETWORK  [conn70] end connection 192.168.11.135:57317 (1 connection now open)
+2015-04-28T20:07:00.041+0300 I NETWORK  [conn69] end connection 192.168.11.135:57316 (1 connection now open)
+2015-04-28T20:07:00.043+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57322 #71 (1 connection now open)
+2015-04-28T20:07:00.044+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57323 #72 (2 connections now open)
+2015-04-28T20:07:30.090+0300 I NETWORK  [conn71] end connection 192.168.11.135:57322 (1 connection now open)
+2015-04-28T20:07:30.090+0300 I NETWORK  [conn72] end connection 192.168.11.135:57323 (1 connection now open)
+2015-04-28T20:07:30.093+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57329 #73 (1 connection now open)
+2015-04-28T20:07:30.094+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57330 #74 (2 connections now open)
+2015-04-28T20:08:00.137+0300 I NETWORK  [conn73] end connection 192.168.11.135:57329 (1 connection now open)
+2015-04-28T20:08:00.137+0300 I NETWORK  [conn74] end connection 192.168.11.135:57330 (1 connection now open)
+2015-04-28T20:08:00.139+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57340 #75 (1 connection now open)
+2015-04-28T20:08:00.140+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57341 #76 (2 connections now open)
+2015-04-28T20:08:30.186+0300 I NETWORK  [conn76] end connection 192.168.11.135:57341 (1 connection now open)
+2015-04-28T20:08:30.186+0300 I NETWORK  [conn75] end connection 192.168.11.135:57340 (1 connection now open)
+2015-04-28T20:08:30.188+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57385 #77 (1 connection now open)
+2015-04-28T20:08:30.190+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57386 #78 (2 connections now open)
+2015-04-28T20:09:00.240+0300 I NETWORK  [conn78] end connection 192.168.11.135:57386 (1 connection now open)
+2015-04-28T20:09:00.240+0300 I NETWORK  [conn77] end connection 192.168.11.135:57385 (1 connection now open)
+2015-04-28T20:09:00.242+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57408 #79 (1 connection now open)
+2015-04-28T20:09:00.244+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57409 #80 (2 connections now open)
+2015-04-28T20:09:30.289+0300 I NETWORK  [conn79] end connection 192.168.11.135:57408 (1 connection now open)
+2015-04-28T20:09:30.289+0300 I NETWORK  [conn80] end connection 192.168.11.135:57409 (1 connection now open)
+2015-04-28T20:09:30.292+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57425 #81 (1 connection now open)
+2015-04-28T20:09:30.294+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57426 #82 (2 connections now open)
+2015-04-28T20:10:00.349+0300 I NETWORK  [conn82] end connection 192.168.11.135:57426 (1 connection now open)
+2015-04-28T20:10:00.349+0300 I NETWORK  [conn81] end connection 192.168.11.135:57425 (1 connection now open)
+2015-04-28T20:10:00.351+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57437 #83 (1 connection now open)
+2015-04-28T20:10:00.352+0300 I NETWORK  [initandlisten] connection accepted from 192.168.11.135:57438 #84 (2 connections now open)

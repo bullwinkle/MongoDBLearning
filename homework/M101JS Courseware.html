@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0128)https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/ -->
+<html class="wf-akzidenzgrotesk-n3-active wf-akzidenzgrotesk-n5-active wf-akzidenzgroteskcondensed-n3-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>M101JS Courseware</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Free Online Classes on MongoDB from MongoDB, Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="path_prefix" content="">
+    <link rel="icon" type="image/x-icon" href="https://university.mongodb.com/static/images/favicon.7d83e8e6c089.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://university.mongodb.com/static/css/bootstrap.61f6500bca08.css" rel="stylesheet" media="screen" id="bootstrapcss">
+    <!-- Other CSS -->
+    <link href="https://university.mongodb.com/static/css/main.9244fa61b018.css" rel="stylesheet" media="screen" id="maincss">
+    <link href="https://university.mongodb.com/static/css/style.e5ef8b9488cc.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Import Font -->
+    <script type="text/javascript" async="" src="./M101JS Courseware_files/BizibleAcct.js"></script><script type="text/javascript" async="" src="./M101JS Courseware_files/elqCfg.min.js"></script><script type="text/javascript" async="" src="./M101JS Courseware_files/analytics.js"></script><script type="text/javascript" id="www-widgetapi-script" src="./M101JS Courseware_files/www-widgetapi.js" async=""></script><script type="text/javascript" async="" src="./M101JS Courseware_files/munchkin.js"></script><script async="" src="./M101JS Courseware_files/gtm.js"></script><script type="text/javascript" src="./M101JS Courseware_files/vsq6ptv.js"></script>
+    <style type="text/css">.tk-akzidenz-grotesk{font-family:"akzidenz-grotesk","Helvetica","Arial",sans-serif;}.tk-akzidenz-grotesk-condensed{font-family:"akzidenz-grotesk-condensed","Myriad Pro Condensed","Arial Narrow",sans-serif;}</style><link rel="stylesheet" href="https://use.typekit.net/c/ee51b8/1w;akzidenz-grotesk,2,YM5:P:n3,YM7:P:n5;akzidenz-grotesk-condensed,2,YSG:P:n3/d?3bb2a6e53c9684ffdc9a9bf7135b2a62c569a8ddca988f707fda988e67881c3fae949173bf268caa2fc5eb8f752c9fbfbea689475f8f380afe44f88b164cdf7589756f9731653a0a697d0c163cc29f48685a7fcd105edfe67c98ae6e5a7c9fe2356bf334d031acfa829f2716a5651412415d3784f12b9d" media="all"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <!-- BEGIN MAIN_VENDOR -->
+    
+    <script type="text/javascript" src="./M101JS Courseware_files/lms-main_vendor.3ac6a7f5a7e6.js" charset="utf-8"></script>
+
+
+    <!-- END MAIN_VENDOR -->
+
+
+    
+  
+    <link href="./M101JS Courseware_files/lms-m5-course.d41d6813860f.css" rel="stylesheet" type="text/css">
+
+
+
+  <link href="./M101JS Courseware_files/prettify.b3ee55d958b6.css" type="text/css" rel="stylesheet">
+
+  <link href="https://university.mongodb.com/static/css/vendor/font-awesome/css/font-awesome.min.04425bbdc624.css" rel="stylesheet">
+
+  
+
+<script type="text/javascript" src="./M101JS Courseware_files/split.1e256a271150.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/jquery.ajaxfileupload.57627e0bf5a3.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/Markdown.Converter.33f02cbe2eb8.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/Markdown.Sanitizer.253c591d1f95.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/Markdown.Editor.520c378977e6.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/jquery.autocomplete.3bd10d7510d2.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/jquery.timeago.fc0094b4cea5.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/jquery.tagsinput.23f60d366109.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/URI.min.04561329ae1d.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/underscore-min.0899f764c85b.js"></script>
+<script type="text/javascript" src="./M101JS Courseware_files/backbone-min.d4d2a80cd8fc.js"></script>
+
+<link href="./M101JS Courseware_files/jquery.tagsinput.bb7a7ef62915.css" rel="stylesheet" type="text/css">
+<link href="./M101JS Courseware_files/jquery.autocomplete.09a0b34739a2.css" rel="stylesheet" type="text/css">
+
+  <script src="./M101JS Courseware_files/webshell-vendor.33288b0a136b.js"></script>
+  <script src="./M101JS Courseware_files/webshell.99f34acb2931.js"></script>
+
+
+    <!-- Google Tag Manager -->
+    <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-58NXVC" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-58NXVC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script src="./M101JS Courseware_files/munchkin(1).js"></script>
+    <script>Munchkin.init('017-HGS-593');</script>
+    
+    <script src="./M101JS Courseware_files/sticky_footer.33d0e18eda40.js"></script>
+  <style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">DIV.MathJax_MathML {text-align: center; margin: .75em 0px}
+.MathJax_MathML {font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+span.MathJax_MathML {display: inline}
+div.MathJax_MathML {display: block}
+.MathJax_mmlExBox {display: block; overflow: hidden; height: 1px; width: 60ex; padding: 0; border: 0; margin: 0}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+  <body class="courseware"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+    
+    
+
+
+
+
+
+
+
+
+<!--START HEADER SECTION-->
+<header id="hover-nav" class="page-header container" role="banner">
+  <div class="row">
+    <div class="col-sm-2">
+      <a href="https://university.mongodb.com/"><img src="./M101JS Courseware_files/mongodb-university-logo_new.baaa6b1901eb.png" alt="MongoDB University"></a>
+    </div><!--end left col -->
+    <div id="menu-move" class="col-sm-10">
+      <nav id="hover-navbar">
+        <ul>
+          
+
+          <li class="dropdown">
+            <a href="https://university.mongodb.com/exams">Professional Certification</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/exams/C100DEV/about">Developer Exam</a></li>
+              <li><a href="https://university.mongodb.com/exams/C100DBA/about">DBA Exam</a></li>
+              <li><a href="https://university.mongodb.com/exams">Why Certification?</a></li>
+              <li><a href="https://university.mongodb.com/exams#materials">Preparation Materials</a></li>
+              <li><a href="https://university.mongodb.com/exams/verify_certificate">Verify a Certification</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+
+            <a href="https://university.mongodb.com/courses">Online Courses</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/courses/catalog">Online Course Catalog</a></li>
+              <li><a href="https://university.mongodb.com/courses/schedule">Online Course Schedule</a></li>
+              <li><a href="https://university.mongodb.com/about/how-mongodb-university-online-courses-are-produced">How Courses Are Produced</a></li>
+            </ul>
+
+          </li>
+          <li class="dropdown">
+            <a href="https://university.mongodb.com/training">Public Training</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/training#why">Why Public Training?</a></li>
+              <li><a href="https://university.mongodb.com/training#schedule">Public Training Schedule</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="https://university.mongodb.com/private_training">Private Training</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/private_training#why">Why Private Training?</a></li>
+              <li><a href="https://university.mongodb.com/private_training#products">Private Training Products</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="https://university.mongodb.com/dashboard" class="btn btn-action navbar-btn">My Courses</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/edit_profile">Edit Profile</a></li>
+              <li><a href="https://university.mongodb.com/logout">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav-username">
+          Bullewinkle
+        </div>
+ 
+        
+      </nav>
+   </div>
+  </div>
+</header>
+<!-- END HEADER CONTAINER -->
+
+
+<!-- clickable nav -->
+<div id="click-nav" class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://university.mongodb.com/"><img src="./M101JS Courseware_files/mongodb-university-logo_new.baaa6b1901eb.png" alt="MongoDB University"></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div><!--end left col -->
+    <div class="navbar-collapse collapse click-navbar">
+      <ul class="nav navbar-nav">
+        
+
+          <li class="dropdown">
+            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" class="dropdown-toggle" data-toggle="dropdown">Professional Certification</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/exams/C100DEV/about">Developer Exam</a></li>
+              <li><a href="https://university.mongodb.com/exams/C100DBA/about">DBA Exam</a></li>
+              <li><a href="https://university.mongodb.com/exams">Why Certification?</a></li>
+              <li><a href="https://university.mongodb.com/exams#materials">Preparation Materials</a></li>
+              <li><a href="https://university.mongodb.com/exams/verify_certificate">Verify a Certification</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+
+            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" class="dropdown-toggle" data-toggle="dropdown">Online Courses</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/courses">What are Online Courses?</a></li>
+              <li><a href="https://university.mongodb.com/courses/catalog">Online Course Catalog</a></li>
+              <li><a href="https://university.mongodb.com/courses/schedule">Online Course Schedule</a></li>
+              <li><a href="https://university.mongodb.com/about/how-mongodb-university-online-courses-are-produced">How Courses Are Produced</a></li>
+            </ul>
+
+          </li>
+          <li class="dropdown">
+            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" class="dropdown-toggle" data-toggle="dropdown">Public Training</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/training">Why Public Training?</a></li>
+              <li><a href="https://university.mongodb.com/training#schedule">Public Training Schedule</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" class="dropdown-toggle" data-toggle="dropdown">Private Training</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/private_training">Why Private Training?</a></li>
+              <li><a href="https://university.mongodb.com/private_training#products">Private Training Products</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" class="dropdown-toggle btn btn-action navbar-btn" data-toggle="dropdown">My Account</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://university.mongodb.com/dashboard">My Courses</a></li>
+              <li><a href="https://university.mongodb.com/edit_profile">Edit Profile</a></li>
+              <li><a href="https://university.mongodb.com/logout">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      
+    </div><!-- navbar-collapse -->
+  </div><!-- container-fluid -->
+</div>
+
+    
+
+    
+    <div class="nav-spaceholder"></div>
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="text-center">M101JS: MongoDB for Node.js Developers</h1>
+      
+
+<nav class="navbar navbar-courseware">
+  <ul class="nav navbar-nav">
+    <li class="active">
+      <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware">Courseware</a>
+    </li>
+    <li>
+      <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/syllabus">Syllabus</a>
+    </li>
+    <li>
+      <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/discussion/forum">Discussion</a>
+    </li>
+    <li>
+      <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/course_wiki">Wiki</a>
+    </li>
+    <li>
+      <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/progress">Progress</a>
+    </li>
+    
+  </ul>
+</nav>
+
+      <div class="row">
+        <div class="col-sm-3 nav-course-container" style="top: 254px; height: 859px; border-bottom-style: none;">
+          <ul class="nav nav-stacked nav-course" id="accordion-courseware">
+            <li class="accordion-caret">
+              <strong class="text-uppercase"><a data-toggle="collapse" data-target="#collapse-Week_1_Introduction" href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#collapse-Week_1_Introduction" class="accordion-toggle collapsed">Week 1: Introduction</a></strong>
+              <ul class="nav collapse " id="collapse-Week_1_Introduction">
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/5245b269e2d42346975228c9/">
+                      <span class="section-viewed">Welcome to M101JS</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/524af6b2e2d4235f73b619ee/">
+                      <span class="section-viewed">What is MongoDB?</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52530600e2d4237f053e42ad/">
+                      <span class="section-viewed">MongoDB Relative to Relational</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52530605e2d4237f053e42ae/">
+                      <span class="section-viewed">Overview of Building an App with MongoDB</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/5254963ae2d4231cc6083ffe/">
+                      <span class="section-viewed">System Requirements</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52546cc8e2d4231cc6083fda/">
+                      <span class="section-viewed">Installing MongoDB (mac)</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525472f0e2d4231cc6083fdb/">
+                      <span class="section-unviewed">Installing MongoDB (windows)</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52549761e2d4231cc6084000/">
+                      <span class="section-viewed">Quick Introduction to the Mongo Shell</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52546b96e2d4231cc6083fd9/">
+                      <span class="section-viewed">Introduction to JSON</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52549889e2d4231cc6084002/">
+                      <span class="section-viewed">Installing Node.js (mac)</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525498a5e2d4231cc6084003/">
+                      <span class="section-viewed">Asynchronous vs Synchronous</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525498c2e2d4231cc6084004/">
+                      <span class="section-viewed">Hello World on Node.js</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525498e0e2d4231cc6084005/">
+                      <span class="section-viewed">Introduction to npm</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525498fde2d4231cc6084006/">
+                      <span class="section-viewed">Hello World, MongoDB Style</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52549988e2d4231cc6084007/">
+                      <span class="section-viewed">Hello World using Express</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/5254999de2d4231cc6084008/">
+                      <span class="section-viewed">Hello World using Express and Swig</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525499c0e2d4231cc6084009/">
+                      <span class="section-viewed">Hello World using Express, Swig, and MongoDB</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525499dce2d4231cc608400a/">
+                      <span class="section-viewed">Express: Handling GET Requests</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52549a53e2d4231cc608400b/">
+                      <span class="section-viewed">Express: Handling POST Requests</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/5254782ae2d4231cc6083fe3/">
+                      <span class="section-viewed">MongoDB is Schemaless</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52547863e2d4231cc6083fe4/">
+                      <span class="section-viewed">JSON Revisited</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52547a4ee2d4231cc6083fe5/">
+                      <span class="section-viewed">JSON Subdocuments</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52547e9be2d4231cc6083fe6/">
+                      <span class="section-viewed">JSON Spec</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52547f8be2d4231cc6083fe7/">
+                      <span class="section-viewed">Introduction to Our Class Project, The Blog</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52547ff6e2d4231cc6083fe8/">
+                      <span class="section-viewed">Blog in Relational Tables</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52548047e2d4231cc6083fe9/">
+                      <span class="section-viewed">Blog in Documents</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525480c9e2d4231cc6083fea/">
+                      <span class="section-viewed">Introduction to Schema Design</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/52580c6ae2d4233116776b98/">
+                      <span class="section-viewed">Homework 1.1</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Mar 24 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525841e5e2d4233537765333/">
+                      <span class="section-viewed">Homework 1.2</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Mar 24 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_1_Introduction/525843fce2d4233537765334/">
+                      <span class="section-viewed">Homework 1.3</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Mar 24 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion-caret">
+              <strong class="text-uppercase"><a data-toggle="collapse" data-target="#collapse-Week_2_CRUD" href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#collapse-Week_2_CRUD" class="accordion-toggle collapsed">Week 2: CRUD</a></strong>
+              <ul class="nav collapse " id="collapse-Week_2_CRUD">
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52cf384de2d423570a05b96d/">
+                      <span class="section-viewed">CRUD and the Mongo Shell</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/528e6e3de2d42315b69ba1db/">
+                      <span class="section-viewed">Secrets of the Mongo Shell</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/528e6e49e2d42315b69ba1dc/">
+                      <span class="section-viewed">BSON Introduced</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/528e6e59e2d42315b69ba1dd/">
+                      <span class="section-viewed">Inserting Docs</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937605e2d423246e7c433a/">
+                      <span class="section-viewed">Introduction to findOne</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937667e2d423246e7c433e/">
+                      <span class="section-viewed">Introduction to find</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/529376c6e2d423246e7c4340/">
+                      <span class="section-viewed">Querying Using field Selection</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/5277ca58e2d4232ebaf906d5/">
+                      <span class="section-viewed">Querying Using $gt and $lt</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/529377e6e2d423246e7c4348/">
+                      <span class="section-viewed">Inequalities on Strings</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/5293787ee2d423246e7c434c/">
+                      <span class="section-viewed">Using regexes, $exists, $type</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/529378d5e2d423246e7c4350/">
+                      <span class="section-viewed">Using $or</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/5293791be2d423246e7c4354/">
+                      <span class="section-viewed">Using $and</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937989e2d423246e7c4359/">
+                      <span class="section-viewed">Querying Inside Arrays</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/529379f7e2d423246e7c435d/">
+                      <span class="section-viewed">Using $in and $all</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937a61e2d423246e7c4362/">
+                      <span class="section-viewed">Queries with Dot Notation</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937aaae2d423246e7c4368/">
+                      <span class="section-viewed">Querying, Cursors</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937af8e2d423246e7c436c/">
+                      <span class="section-viewed">Counting Results</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937e43e2d423246e7c4370/">
+                      <span class="section-viewed">Wholesale Updating of a Document</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937ed4e2d423246e7c4374/">
+                      <span class="section-viewed">Using the $set Command</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52937a59e2d423246e7c4361/">
+                      <span class="section-viewed">Using the $unset Command</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52938211e2d423246e7c437c/">
+                      <span class="section-viewed">Using $push, $pop, $pull, $pushAll, $pullAll, $addToSet</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52938285e2d423246e7c4380/">
+                      <span class="section-viewed">Upserts</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52938311e2d423246e7c4384/">
+                      <span class="section-viewed">Multi-update</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/528ebf39e2d4231c61af8802/">
+                      <span class="section-viewed">Removing Data</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d04ae9e2d423570a05b997/">
+                      <span class="section-viewed">Node.js Driver: find, findOne, and cursors</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d04b4de2d423570a05b99b/">
+                      <span class="section-viewed">Node.js Driver: Using Field Projection</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d04b8ae2d423570a05b99f/">
+                      <span class="section-viewed">Node.js Driver: Using $gt and $lt</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d072b7e2d423570a05b9e6/">
+                      <span class="section-viewed">Importing Reddit</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d072e5e2d423570a05b9e8/">
+                      <span class="section-viewed">Node.js Driver: Using $regex</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d07341e2d423570a05b9ec/">
+                      <span class="section-viewed">Node.js Driver: Using Dot Notation</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d07394e2d423570a05b9f0/">
+                      <span class="section-viewed">Node.js Driver: Skip, Limit and Sort</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d073eee2d423570a05b9f4/">
+                      <span class="section-viewed">Node.js Driver: Inserting, _id</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d07a94e2d423570a05b9f8/">
+                      <span class="section-viewed">Node.js Driver: Updating</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d07b5ee2d423570a05b9fc/">
+                      <span class="section-viewed">Node.js Driver: Upserts</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d07bd7e2d423570a05ba00/">
+                      <span class="section-viewed">Node.js Driver: findAndModify</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d07c36e2d423570a05ba04/">
+                      <span class="section-viewed">Node.js Driver: Remove</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d081a9e2d423570a05ba08/">
+                      <span class="section-viewed">Blog Introduction</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d081b7e2d423570a05ba0a/">
+                      <span class="section-viewed">Blog Application Architecture</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d081cce2d423570a05ba0c/">
+                      <span class="section-viewed">Blog, Session Management</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52d0820ae2d423570a05ba0e/">
+                      <span class="section-viewed">Homework 2.1</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Mar 31 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/533ee5a78bb48b0f7851b065/">
+                      <span class="section-viewed">Using MongoProc</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52ddbd20e2d423744501cfc0/">
+                      <span class="section-viewed">Homework 2.2</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Mar 31 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_2_CRUD/52dd05a3e2d423744501cfba/">
+                      <span class="section-viewed">Homework 2.3</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Incorrect">
+                                <i class="fa fa-times"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Mar 31 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion-caret">
+              <strong class="text-uppercase"><a data-toggle="collapse" data-target="#collapse-Week_3_Schema_Design" href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#collapse-Week_3_Schema_Design" class="accordion-toggle collapsed">Week 3: Schema Design</a></strong>
+              <ul class="nav collapse " id="collapse-Week_3_Schema_Design">
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/52d99f78e2d423744501cf75/">
+                      <span class="section-viewed">Introduction to Week 3</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529df9f2e2d42347509fb377/">
+                      <span class="section-viewed">MongoDB Schema Design</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfa67e2d42347509fb37b/">
+                      <span class="section-viewed">Relational Normalization</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfa95e2d42347509fb37d/">
+                      <span class="section-viewed">Mongo Design for Blog</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfb9be2d42347509fb381/">
+                      <span class="section-viewed">Alternative Schema for Blog</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfbd1e2d42347509fb384/">
+                      <span class="section-viewed">Living Without Constraints</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfcbfe2d42347509fb388/">
+                      <span class="section-viewed">Living Without Transactions</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfd25e2d42347509fb38c/">
+                      <span class="section-viewed">One to One Relations</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfde4e2d42347509fb390/">
+                      <span class="section-viewed">One to Many Relations</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfe4be2d42347509fb394/">
+                      <span class="section-viewed">Many to Many Relations</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfed2e2d42347509fb396/">
+                      <span class="section-viewed">Multikeys</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dfefbe2d42347509fb398/">
+                      <span class="section-viewed">Benefits of Embedding</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dff1ce2d42347509fb39a/">
+                      <span class="section-viewed">Trees</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dff77e2d42347509fb39e/">
+                      <span class="section-viewed">When to Denormalize</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/529dffcae2d42347509fb3a2/">
+                      <span class="section-viewed">Homework 3.1</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 07 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/52e6871de2d423298bce849c/">
+                      <span class="section-viewed">Homework 3.2</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 07 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_3_Schema_Design/52e68d24e2d423298bce84a0/">
+                      <span class="section-viewed">Homework 3.3 (MongoProc Version)</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 07 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion-caret">
+              <strong class="text-uppercase"><a data-toggle="collapse" data-target="#collapse-Week_4_Performance" href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#collapse-Week_4_Performance" class="accordion-toggle collapsed">Week 4: Performance</a></strong>
+              <ul class="nav collapse " id="collapse-Week_4_Performance">
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52a9fa01e2d423242df5901c/">
+                      <span class="section-viewed">Introduction to Week 4</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/5511794cd8ca39285477dfd2/">
+                      <span class="section-viewed">Storage Engines: Introduction</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/55117998d8ca39285577dfe9/">
+                      <span class="section-viewed">Storage Engines: MMAPv1</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/55117a61d8ca39285477dfd4/">
+                      <span class="section-viewed">Storage Engines: WiredTiger</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa16abe2d4232c54a18a7a/">
+                      <span class="section-viewed">Indexes</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa1916e2d4232c54a18a7e/">
+                      <span class="section-viewed">Creating Indexes</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa1f50e2d4232c54a18a83/">
+                      <span class="section-viewed">Discovering (and Deleting) Indexes</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa1f7be2d4232c54a18a85/">
+                      <span class="section-viewed">Multikey Indexes</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa1ff8e2d4232c54a18a89/">
+                      <span class="section-viewed">Dot Notation and Multikey</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2014e2d4232c54a18a8b/">
+                      <span class="section-viewed">Index Creation Option, Unique</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa21abe2d4232c54a18a93/">
+                      <span class="section-viewed">Index Creation, Sparse</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2209e2d4232c54a18a97/">
+                      <span class="section-viewed">Index Creation, Background</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/5512e360d8ca39285577e014/">
+                      <span class="section-viewed">Using Explain</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa23dbe2d4232c54a18a9b/">
+                      <span class="section-viewed">Explain: Verbosity</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/551180fdd8ca39285477dfd6/">
+                      <span class="section-viewed">Covered Queries</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2746e2d4232c54a18a9f/">
+                      <span class="section-viewed">When is an Index Used?</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa279fe2d4232c54a18aa3/">
+                      <span class="section-viewed">How Large is Your Index?</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa284be2d4232c54a18aa7/">
+                      <span class="section-viewed">Number of Index Entries</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2a3de2d4232c54a18ab7/">
+                      <span class="section-viewed">Geospatial Indexes</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2abce2d4232c54a18abb/">
+                      <span class="section-viewed">Geospatial Spherical</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/534ca6ac8bb48b4f0194e1b2/">
+                      <span class="section-viewed">Text Indexes</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa294de2d4232c54a18ab5/">
+                      <span class="section-viewed">Efficiency of Index Use</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/5523e300d8ca39502477dfc4/">
+                      <span class="section-viewed">Efficiency of Index Use Example</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2ad7e2d4232c54a18abd/">
+                      <span class="section-viewed">Logging Slow Queries</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2af8e2d4232c54a18abf/">
+                      <span class="section-viewed">Profiling</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2b3ee2d4232c54a18ac3/">
+                      <span class="section-viewed">Mongotop</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2b5de2d4232c54a18ac5/">
+                      <span class="section-viewed">Mongostat</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2b7ae2d4232c54a18ac7/">
+                      <span class="section-viewed">Sharding Overview</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa2f48e2d4232c54a18ac9/">
+                      <span class="section-viewed">Homework 4.1</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 14 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52aa32dfe2d4232c54a18ace/">
+                      <span class="section-viewed">Homework 4.2</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 14 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52e93bf8e2d42365b944fcda/">
+                      <span class="section-viewed">Homework 4.3</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 14 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_4_Performance/52cf29bae2d423570a05b92d/">
+                      <span class="section-viewed">Homework 4.4</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 14 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion-caret">
+              <strong class="text-uppercase"><a data-toggle="collapse" data-target="#collapse-Week_5_Aggregation_Framework" href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#collapse-Week_5_Aggregation_Framework" class="accordion-toggle ">Week 5: Aggregation Framework</a></strong>
+              <ul class="nav collapse in" id="collapse-Week_5_Aggregation_Framework">
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa33cee2d4232c54a18ad8/">
+                      <span class="section-viewed">Introduction to Week 5</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3411e2d4232c54a18ada/">
+                      <span class="section-viewed">Simple Aggregation Example</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa350fe2d4232c54a18ade/">
+                      <span class="section-viewed">The Aggregation Pipeline</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa360ee2d4232c54a18ae2/">
+                      <span class="section-viewed">Simple Example Expanded</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3666e2d4232c54a18ae6/">
+                      <span class="section-viewed">Compound Grouping</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa370de2d4232c54a18aea/">
+                      <span class="section-viewed">Using a document for _id</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3727e2d4232c54a18aec/">
+                      <span class="section-viewed">Aggregation Expressions</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa378fe2d4232c54a18af0/">
+                      <span class="section-viewed">Using $sum</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa38a4e2d4232c54a18af4/">
+                      <span class="section-viewed">Using $avg</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa390ce2d4232c54a18af8/">
+                      <span class="section-viewed">Using $addToSet</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3951e2d4232c54a18afc/">
+                      <span class="section-viewed">Using $push</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa399de2d4232c54a18b00/">
+                      <span class="section-viewed">Using $max and $min</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3bb8e2d4232c54a18b04/">
+                      <span class="section-viewed">Double $group stages</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3c26e2d4232c54a18b08/">
+                      <span class="section-viewed">Using $project</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3c71e2d4232c54a18b0c/">
+                      <span class="section-viewed">Using $match</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3cc9e2d4232c54a18b10/">
+                      <span class="section-viewed">Using $sort</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3d0fe2d4232c54a18b19/">
+                      <span class="section-viewed">Using $limit and $skip</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3da6e2d4232c54a18b1d/">
+                      <span class="section-viewed">Revisiting $first and $last</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3df4e2d4232c54a18b21/">
+                      <span class="section-viewed">Using $unwind</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3e46e2d4232c54a18b25/">
+                      <span class="section-viewed">$unwind example</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa3ec0e2d4232c54a18b29/">
+                      <span class="section-viewed">Double $unwind</span>
+                    </a>
+                    <br>
+                    <small>
+                      Quiz 
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa41aae2d4232c54a18b2d/">
+                      <span class="section-viewed">Mapping between SQL and Aggregation</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa41cce2d4232c54a18b2f/">
+                      <span class="section-viewed">Some Common SQL examples</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa41f1e2d4232c54a18b31/">
+                      <span class="section-viewed">Limitations of the Aggregation Framework</span>
+                    </a>
+                    <br>
+                    <small>
+                       
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52cf2c07e2d423570a05b931/">
+                      <span class="section-viewed">Homework 5.1 (Hands On)</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 21 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa426fe2d4232c54a18b37/">
+                      <span class="section-viewed">Homework 5.2 (Hands On)</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 21 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="">
+                  <p>
+                    <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45b2e2d4232c54a18b3a/">
+                      <span class="section-viewed">Homework 5.3 (Hands On)</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Correct">
+                                <i class="fa fa-check-circle"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 21 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+                <li class="active">
+                  <p>
+                    <a href="./M101JS Courseware_files/M101JS Courseware.html">
+                      <span class="section-viewed">Homework 5.4</span>
+                    </a>
+                    <br>
+                    <small>
+                        <span style=" position: relative; ">
+                          <span style=" position: absolute; left: -1em; ">
+                            <a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" data-toggle="tooltip" title="" data-placement="right" data-original-title="Not Yet Complete">
+                                <i class="fa fa-circle-o"></i>
+                            </a>
+                          </span>
+                        </span>
+                      Homework due Apr 21 17:00 UTC 2015
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-sm-9 course-content">
+          <section class="xmodule_display xmodule_SequenceModule" data-type="Sequence">
+    <div id="sequence_i4x-10gen-M101JS-sequential-52aa45fee2d4232c54a18b3d" class="sequence" data-id="i4x://10gen/M101JS/sequential/52aa45fee2d4232c54a18b3d" data-position="1" data-course_modx_root="/courses/10gen/M101JS/2015_March/modx" data-prev_section_url="/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45b2e2d4232c54a18b3a/" data-next_section_url="None" data-lesson_format="Homework" data-display_name="Homework 5.4">
+  <nav aria-label="Section Navigation" class="sequence-nav">
+    <div class="sequence-list-wrapper">
+      <ol id="sequence-list">
+        <li>
+          <a class="seq_problem progress-none active" data-element="1" data-title="Homework: Homework 5.4">
+            <p>Homework: Homework 5.4</p>
+          </a>
+        </li>
+      </ol>
+    </div>
+
+    <ul class="sequence-nav-buttons">
+      <li class="prev"><a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#">Previous</a></li>
+      <li class="next"><a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" class="disabled">Next</a></li>
+    </ul>
+  </nav>
+  <div class="download-assets"> 
+            <a href="https://university.mongodb.com/static/10gen_2015_M101JS_March/handouts/zips.4854d69c2ac3.json">Download Handout</a>
+  </div>
+  <div class="seq_contents tex2jax_ignore asciimath2jax_ignore">&lt;section class="xmodule_display xmodule_VerticalModule" data-type="None"&gt;
+    &lt;ol class="vert-mod"&gt;
+  &lt;li id="vert-0"&gt;
+    &lt;section class="xmodule_display xmodule_CapaModule" data-type="Problem"&gt;
+    &lt;section id="problem_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e" class="problems-wrapper" data-problem-id="i4x://10gen/M101JS/problem/52aa4639e2d4232c54a18b3e" data-url="/courses/10gen/M101JS/2015_March/modx/i4x://10gen/M101JS/problem/52aa4639e2d4232c54a18b3e"&gt;&lt;/section&gt;
+
+&lt;/section&gt;
+
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;/section&gt;
+</div>
+  <div id="seq_content"><section class="xmodule_display xmodule_VerticalModule" data-type="None">
+    <ol class="vert-mod">
+  <li id="vert-0">
+    <section class="xmodule_display xmodule_CapaModule" data-type="Problem">
+    <section id="problem_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e" class="problems-wrapper" data-problem-id="i4x://10gen/M101JS/problem/52aa4639e2d4232c54a18b3e" data-url="/courses/10gen/M101JS/2015_March/modx/i4x://10gen/M101JS/problem/52aa4639e2d4232c54a18b3e"><div><h2 class="problem-header">
+  Homework: Homework 5.4
+</h2>
+
+<section class="problem"><div><p><b>Removing Rural Residents</b><br></p><p>In this problem you will calculate the number of people who live in a zip code in the US where the city starts with a digit. We will take that to mean they don't really live in a city.  Once again, you will be using the zip code collection, which you will find in the 'handouts' link in this page. Import it into your mongod using the following command from the command line:</p><pre>&gt; mongoimport -d test -c zips --drop zips.json
+</pre><p>If you imported it correctly, you can go to the <em>test</em> database in the mongo shell and conform that</p><pre>&gt; db.zips.count()
+</pre><p>yields 29,467 documents. </p><p>The project operator can extract the first digit from any field. For example, to extract the first digit from the city field, you could write this query:</p><pre>db.zips.aggregate([
+    {$project: 
+     {
+	first_char: {$substr : ["$city",0,1]},
+     }	 
+   }
+])
+</pre><p>Using the aggregation framework, calculate the sum total of people who are living in a zip code where the city starts with a digit. Choose the answer below.</p><p><i>You will need to probably change your projection to send more info through than just that first character. Also, you will need a filtering step to get rid of all documents where the city does not start with a digital (0-9).</i></p><p><i>Note: When you mongoimport the data, you will probably see a few duplicate key errors; this is to be expected, and will not prevent the mongoimport from working. There is also an issue with MongoDB 3.0.2 where it claims that 0 documents were mongoimported, when in fact there were 29,467 documents imported. You can verify this for yourself by going into the shell and counting the documents in the "test.zips" collection.</i></p><span><form class="choicegroup capa_inputtype" id="inputtype_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1" __biza="WJ__"><div class="indicator_container"><span class="unanswered" style="display:inline-block;" id="status_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1"></span></div><fieldset><label for="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_0"><input type="radio" name="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1" id="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_0" value="choice_0"> 298015 </label><label for="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_1"><input type="radio" name="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1" id="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_1" value="choice_1"> 345232 </label><label for="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_2"><input type="radio" name="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1" id="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_2" value="choice_2"> 245987 </label><label for="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_3"><input type="radio" name="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1" id="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_3" value="choice_3"> 312893 </label><label for="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_4"><input type="radio" name="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1" id="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_4" value="choice_4"> 158249 </label><label for="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_5"><input type="radio" name="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1" id="input_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1_choice_5" value="choice_5"> 543282 </label><span id="answer_i4x-10gen-M101JS-problem-52aa4639e2d4232c54a18b3e_2_1"></span></fieldset></form></span></div>
+
+  <section class="action"><input type="hidden" name="problem_id" value="Homework: Homework 5.4"><input class="btn btn-action button check Submit" type="button" value="Submit"><input class="save button-secondary" type="button" value="Save"><section class="submission_feedback">
+      You have used 0 of 3 submissions
+    </section></section></section></div></section>
+
+</section>
+
+  </li>
+</ol>
+
+</section>
+</div>
+
+  <nav class="sequence-bottom">
+    <ul aria-label="Section Navigation" class="sequence-nav-buttons">
+      <li class="prev"><a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#">Previous</a></li>
+      <li class="next"><a href="https://university.mongodb.com/courses/10gen/M101JS/2015_March/courseware/Week_5_Aggregation_Framework/52aa45fee2d4232c54a18b3d/#" class="disabled">Next</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // download files dropdown
+    $('.dropdown-link').toggle(function() {                                                               
+      $('ul.dropdown-downloads').addClass("expanded");                                                     
+      $('a.dropdown-downloads').addClass("active");                                                             
+    }, function() {                                                                                   
+      $('ul.dropdown-downloads').removeClass("expanded");                                                  
+      $('a.dropdown-downloads').removeClass("active");                                                          
+    }); 
+
+  });
+</script>
+
+</section>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+
+
+<!--START FOOTER SECTION-->
+<footer id="footer" class="container vert-offset-6">
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="footer-nav" class="pull-left">
+        <ul class="list-inline">
+          <li>Copyright © 2015 MongoDB, Inc.</li>
+          <li><a href="https://university.mongodb.com/contact">Contact Us</a></li>
+          <li><a href="https://university.mongodb.com/help">Help</a></li>
+          <li><a href="http://www.mongodb.com/legal/legal-notices"> Legal Notices</a></li>
+        </ul>
+      </div>
+      <div class="social pull-right"> 
+        <a href="https://twitter.com/mongodbinc"><img src="./M101JS Courseware_files/twitter.205e991f5622.png"></a> 
+        <a href="http://www.youtube.com/user/MongoDB"><img src="./M101JS Courseware_files/youtube.e76cdf736116.png"></a> 
+        <a href="https://www.facebook.com/mongodb"><img src="./M101JS Courseware_files/facebook.7bad9b890793.png"></a> 
+        <a href="https://plus.google.com/u/1/101024085748034940765/posts?cfem=1"><img src="./M101JS Courseware_files/google-plus.3a4767b904a4.png"></a> 
+        <a href="http://www.linkedin.com/groups?gid=2340731&trk=vsrp_groups_res_name&trkInfo=VSRPsearchId%3A59383871372789714033%2CVSRPtargetId%3A2340731%2CVSRPcmpt%3Aprimary"><img src="./M101JS Courseware_files/linkedin.aa16dd424e51.png"></a> 
+	<a href="http://openedx.org/"><img src="./M101JS Courseware_files/edx-openedx-logo-tag-dark.png" height="32" alt="Powered by Open edX"></a>
+      </div><!--end social -->
+    </div><!--end right col -->
+  </div> <!--end footer row -->
+</footer>
+<!-- END FOOTER CONTAINER -->
+
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="./M101JS Courseware_files/lms-application.02f0ca828125.js" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="./M101JS Courseware_files/lms-modules.a0979c5284fe.js" charset="utf-8"></script>
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="./M101JS Courseware_files/bootstrap.c1eff7b72ea8.js"></script>
+    
+  <script src="./M101JS Courseware_files/jquery.scrollTo-1.4.2-min.4aa3e2dfa312.js"></script>
+  <script src="./M101JS Courseware_files/jquery.flot.89bc8ea971e9.js"></script>
+  <script src="./M101JS Courseware_files/prettify.db158ccd3edb.js"></script>
+  <script src="./M101JS Courseware_files/nav-course.089591174d4f.js"></script>
+
+  
+    <script type="text/javascript" src="./M101JS Courseware_files/lms-courseware.54480bda7ef1.js" charset="utf-8"></script>
+
+
+  
+    <script type="text/javascript" src="./M101JS Courseware_files/discussion.e734dddcfa08.js" charset="utf-8"></script>
+
+
+
+  
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="./M101JS Courseware_files/MathJax.js"></script>
+
+
+  <script src="./M101JS Courseware_files/player_api"></script>
+
+  
+
+
+    
+
+    <span id="bizible-settings" data-attach-secure-forms="true" style="display: none;"></span>
+    <script async="" src="./M101JS Courseware_files/_biz-a.js"></script>
+  
+
+<img src="./M101JS Courseware_files/ipv" style="display: none;"><span id="bizible-settings" data-attach-secure-forms="true" style="display: none"></span>
+<script type="text/javascript" id="" src="./M101JS Courseware_files/_biz-a.js"></script><script type="text/javascript" id="" src="./M101JS Courseware_files/2373000234.js"></script><script type="text/javascript" id="">var _elqQ=_elqQ||[];_elqQ.push(["elqSetSiteId","413370795"]);_elqQ.push(["elqTrackPageView"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//img03.en25.com/i/elqCfg.min.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: STIXSizeOneSym, sans-serif;">ˆ</div></body></html>
