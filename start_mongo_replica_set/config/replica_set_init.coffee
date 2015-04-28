@@ -1,10 +1,8 @@
 
 module.exports = 
-	_id: "rs1"
+	_id: "m101"
 	members:[
-		{ _id : 1, host : "MacBook-Air-Bullwinkle.local:30001"}
-		{ _id : 2, host : "MacBook-Air-Bullwinkle.local:30002"}
-		{ _id : 3, host : "MacBook-Air-Bullwinkle.local:30003"}
-		{ _id : 4, host : "MacBook-Air-Bullwinkle.local:30004"}
-		{ _id : 5, host : "MacBook-Air-Bullwinkle.local:30005"}
+		{ _id : 0, host : "D-galnykin.local:27017"}
+		{ _id : 1, host : "D-galnykin.local:27018"}
+		{ _id : 2, host : "D-galnykin.local:27019"}
 	]

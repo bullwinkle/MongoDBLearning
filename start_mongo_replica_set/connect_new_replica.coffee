@@ -31,10 +31,10 @@ initReplica = (db, callback) ->
 	db.command replSetInitiate : CONFIG.initReplicaSet, callback
 
 connectDb = (callback) ->
-	MongoClient.connect "mongodb://localhost:30001", callback
+	MongoClient.connect "mongodb://localhost:27017", callback
 
 connectReplica = (callback) ->
-	MongoClient.connect "mongodb://localhost:30001,localhost:30002,localhost:30003?replicaSet=rs1", callback
+	MongoClient.connect "mongodb://localhost:27017,localhost:27017,localhost:27017", callback
 
 defaultReplicaConnectedCallback = (err, db) ->
 	if err then throw err	
